@@ -19,7 +19,7 @@ export default function LoginPage() {
     if (res.ok) {
       router.push('/admin/blog')
     } else {
-      setError('Galat password')
+      setError('Wrong password')
     }
   }
 

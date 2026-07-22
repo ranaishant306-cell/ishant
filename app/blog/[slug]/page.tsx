@@ -67,7 +67,7 @@ export default async function BlogPostPage({
   if (!post) notFound()
 
   return (
-    <main className="bg-black min-h-screen px-4 sm:px-6 md:px-16 py-16 md:py-24">
+    <main className="bg-black min-h-screen px-4 sm:px-6 md:px-16 pt-28 sm:pt-32 md:pt-36 pb-16 md:pb-24">
       <article className="max-w-3xl mx-auto">
         <Link
           href="/about"

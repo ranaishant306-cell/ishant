@@ -9,7 +9,7 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "HOS — Creative Production Agency",
+  title: "Pahadi Bhula Production — Creative Production Agency",
   description: "We create high-quality commercials, corporate videos, social media content.",
 };
 
