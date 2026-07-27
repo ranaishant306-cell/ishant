@@ -13,7 +13,7 @@ const clients = [
   { name: "HIT Doon", logo: "/hit-doon.jpeg" },
   { name: "Rab&Rab", logo: "/rab-rab.jpg" },
   { name: "paradox", logo: "/paradox.jpg" },
-  { name: "NBC", logo: "/nbc.jpg" },
+  { name: "NBC", logo: "https://res.cloudinary.com/davlyosj1/image/upload/v1785128567/WhatsApp_Image_2026-07-22_at_3.10.16_PM_hcrf9j.jpg" },
   { name: "Dot& key", logo: "/dot-key.png" },
 ];
 
