@@ -209,7 +209,7 @@ const handleSubmit = async () => {
     {/* Profile Card */}
           <div className="bg-white rounded-3xl p-8 text-center shadow-sm border border-gray-100">
             <div className="mx-auto mb-4 flex items-center justify-center">
-              <Image src="/logo.png" alt="Pahadi Bhula" width={160} height={160} className="h-24 w-auto object-contain invert" />
+              <Image src="/logo.png" alt="Pahadi Bhula" width={1584} height={518} className="h-24 w-auto object-contain invert" />
             </div>
             <h1 className="text-lg font-semibold text-gray-900">Pahadi Bhula Team</h1>
           <p className="text-sm text-gray-500 mt-0.5">Creative Director · Pahadi Bhula Production</p>

@@ -35,7 +35,7 @@ Whether you're creating a film, launching a brand, designing a digital experienc
 
   {/* Logo + desc */}
   <div className="md:col-span-1">
-    <Image src="/logo.png" alt="Pahadi Bhula" width={260} height={80} className="h-20 w-auto object-contain mb-4" />
+    <Image src="/logo.png" alt="Pahadi Bhula" width={1584} height={518} className="h-20 w-auto object-contain mb-4" />
     <p className="text-white/30 text-sm leading-relaxed">
       A creative production house in Dehradun crafting stories that move people and brands forward.
     </p>

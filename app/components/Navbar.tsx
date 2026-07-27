@@ -23,7 +23,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" className="flex items-center -ml-4">
-          <Image src="/logo.png" alt="Pahadi Bhula" width={220} height={80} priority className="h-20 w-auto -my-5 object-contain" />
+          <Image src="/logo.png" alt="Pahadi Bhula" width={1584} height={518} priority className="h-20 w-auto -my-5 object-contain" />
         </Link>
 
         {/* Desktop Nav */}

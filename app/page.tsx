@@ -10,11 +10,11 @@ import Testimonials from "./components/Testimonials";
 import SkillsGrid from "./components/SkillsGrid";
 import SplitText from "./components/SplitText";
 const clients = [
-  { name: "HIT Doon", logo: "/hit-doon.jpeg" },
-  { name: "Rab&Rab", logo: "/rab-rab.jpg" },
-  { name: "paradox", logo: "/paradox.jpg" },
-  { name: "NBC", logo: "https://res.cloudinary.com/davlyosj1/image/upload/v1785128567/WhatsApp_Image_2026-07-22_at_3.10.16_PM_hcrf9j.jpg" },
-  { name: "Dot& key", logo: "/dot-key.png" },
+  { name: "HIT Doon", logo: "/hit-doon.jpeg", width: 220, height: 215 },
+  { name: "Rab&Rab", logo: "/rab-rab.jpg", width: 200, height: 200 },
+  { name: "paradox", logo: "/paradox.jpg", width: 408, height: 490 },
+  { name: "NBC", logo: "https://res.cloudinary.com/davlyosj1/image/upload/v1785128567/WhatsApp_Image_2026-07-22_at_3.10.16_PM_hcrf9j.jpg", width: 447, height: 447 },
+  { name: "Dot& key", logo: "/dot-key.png", width: 263, height: 148 },
 ];
 
 export default function Home() {
@@ -26,10 +26,10 @@ export default function Home() {
   useEffect(() => {
     if (layout === "three") {
       oneVideoRef.current?.pause();
-      threeVideoRefs.current.forEach((v) => v?.play());
+      threeVideoRefs.current.forEach((v) => v?.play().catch(() => {}));
     } else {
       threeVideoRefs.current.forEach((v) => v?.pause());
-      oneVideoRef.current?.play();
+      oneVideoRef.current?.play().catch(() => {});
     }
   }, [layout]);
 
@@ -177,7 +177,7 @@ export default function Home() {
             style={{ background: "linear-gradient(to left, black, transparent)" }} />
           <div className="flex items-center gap-8 sm:gap-12 md:gap-16" style={{ animation: "marquee 20s linear infinite", width: "max-content" }}>
             {[...clients, ...clients].map((client, i) => (
-              <Image key={i} src={client.logo} alt={client.name} width={200} height={80}
+              <Image key={i} src={client.logo} alt={client.name} width={client.width} height={client.height}
                 className="shrink-0 h-16 md:h-20 w-auto object-contain rounded-lg grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 select-none" />
             ))}
           </div>
