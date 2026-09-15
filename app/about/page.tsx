@@ -7,7 +7,6 @@ import ValuesSection from "./ValuesSection";
 import TeamSection from "./TeamSection";
 import HowWeWorkSection from "./HowWeWorkSection";
 import WhyUsSection from "./WhyUsSection";
-import BlogSection from "./BlogSection";
 import HeroParallax from "./HeroParallax";
 
 export default function AboutPage() {
@@ -26,32 +25,12 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-black/55" />
 
         <HeroParallax />
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-24 left-6 md:left-16 z-10 flex flex-col items-center gap-2">
-          <p
-            className="text-white/40 text-sm tracking-widest"
-            style={{ writingMode: "vertical-rl" }}
-          >
-            SCROLL
-          </p>
-          <div className="w-px h-16 overflow-hidden">
-            <div
-              className="w-full bg-white/40"
-              style={{
-                height: "100%",
-                animation: "scrollLine 1.8s ease-in-out infinite",
-              }}
-            />
-          </div>
-        </div>
       </section>
 
       <AgencySection />
       <StorySection />
       <ValuesSection />
       <TeamSection />
-      <BlogSection />
       <HowWeWorkSection />
       <WhyUsSection />
 

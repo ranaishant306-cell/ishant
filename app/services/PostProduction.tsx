@@ -106,7 +106,7 @@ export default function PostProduction() {
       <div className="bg-[#0d0d0d] text-white rounded-3xl px-8 md:px-12 py-14 grid md:grid-cols-2 gap-10 relative">
         {/* Left side - sticky text + images pinned at bottom */}
         <div className="relative">
-          <div className="sticky top-24 flex flex-col justify-between h-[calc(100vh-8rem)]">
+          <div className="md:sticky md:top-24 flex flex-col justify-between md:h-[calc(100vh-8rem)]">
             {/* Text - top */}
             <div className="relative z-10">
               <h2 className="text-4xl font-bold mb-4">Post-Production</h2>
@@ -129,7 +129,7 @@ Our post-production team transforms raw footage into polished cinematic experien
               className="grid grid-cols-2 gap-4 -z-10 relative"
               style={{ transition: "transform 0.1s linear" }}
             >
-              <div className="relative h-56 rounded-xl overflow-hidden">
+              <div className="relative h-36 sm:h-48 md:h-56 rounded-xl overflow-hidden">
                 <Image
                   src="/images/ColorGrading.jpg"
                   alt="Color grading"
@@ -137,7 +137,7 @@ Our post-production team transforms raw footage into polished cinematic experien
                   className="object-cover"
                 />
               </div>
-              <div className="relative h-56 rounded-xl overflow-hidden">
+              <div className="relative h-36 sm:h-48 md:h-56 rounded-xl overflow-hidden">
                 <Image
                   src="/images/drone.jpg"
                   alt="3D animation and CGI"

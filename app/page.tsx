@@ -170,13 +170,17 @@ export default function Home() {
         <p className="text-center text-white/50 text-sm font-medium mb-10 tracking-widest uppercase">
           Standing Tall with Our Clients
         </p>
-        <div className="relative overflow-hidden">
-          <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 z-10"
-            style={{ background: "linear-gradient(to right, black, transparent)" }} />
-          <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 z-10"
-            style={{ background: "linear-gradient(to left, black, transparent)" }} />
-          <div className="flex items-center gap-8 sm:gap-12 md:gap-16" style={{ animation: "marquee 20s linear infinite", width: "max-content" }}>
-            {[...clients, ...clients].map((client, i) => (
+        <div
+          className="relative overflow-hidden"
+          style={{
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
+            maskImage:
+              "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
+          }}
+        >
+          <div className="flex items-center gap-8 sm:gap-12 md:gap-16" style={{ animation: "marquee 35s linear infinite", width: "max-content" }}>
+            {[...clients, ...clients, ...clients, ...clients].map((client, i) => (
               <Image key={i} src={client.logo} alt={client.name} width={client.width} height={client.height}
                 className="shrink-0 h-16 md:h-20 w-auto object-contain rounded-lg grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 select-none" />
             ))}

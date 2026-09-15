@@ -154,7 +154,7 @@ export default function Production() {
               className="grid grid-cols-2 gap-4 -z-10 relative"
               style={{ transition: "transform 0.1s linear" }}
             >
-              <div className="relative h-56 rounded-xl overflow-hidden">
+              <div className="relative h-36 sm:h-48 md:h-56 rounded-xl overflow-hidden">
                 <Image
                   src="/images/drone.jpg"
                   alt="Drone videography"
@@ -162,7 +162,7 @@ export default function Production() {
                   className="object-cover"
                 />
               </div>
-              <div className="relative h-56 rounded-xl overflow-hidden">
+              <div className="relative h-36 sm:h-48 md:h-56 rounded-xl overflow-hidden">
                 <Image
                   src="/images/gimbal.jpg"
                   alt="Gimbal work"

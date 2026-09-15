@@ -71,7 +71,7 @@ export default function FAQ() {
 
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  isOpen ? "max-h-40 opacity-100 mt-4" : "max-h-0 opacity-0"
+                  isOpen ? "max-h-60 opacity-100 mt-4" : "max-h-0 opacity-0"
                 }`}
               >
                 <p className="text-gray-400">{item.answer}</p>

@@ -19,11 +19,11 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-4 left-0 right-0 z-50 px-4">
-      <div className="max-w-6xl mx-auto px-4 sm:px-8 py-3 flex items-center justify-between gap-4 md:gap-24 rounded-full border border-white/15 bg-white/10 shadow-lg shadow-black/20 backdrop-blur-xl">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8 py-3 flex items-center justify-between gap-4 md:gap-24 rounded-full border border-white/15 bg-black/40 shadow-lg shadow-black/20 backdrop-blur-xl">
 
         {/* Logo */}
         <Link href="/" className="flex items-center -ml-4">
-          <Image src="/logo.png" alt="Pahadi Bhula" width={1584} height={518} priority className="h-20 w-auto -my-5 object-contain" />
+          <Image src="/logo.png" alt="Pahadi Bhula" width={1584} height={518} priority className="h-14 sm:h-16 md:h-20 w-auto -my-3 sm:-my-4 md:-my-5 object-contain" />
         </Link>
 
         {/* Desktop Nav */}
@@ -79,7 +79,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden max-w-6xl mx-auto mt-2 rounded-3xl border border-white/15 bg-white/10 shadow-lg shadow-black/20 backdrop-blur-xl px-8 py-6 flex flex-col gap-4">
+        <div className="md:hidden max-w-6xl mx-auto mt-2 rounded-3xl border border-white/15 bg-white/10 shadow-lg shadow-black/20 backdrop-blur-xl px-5 sm:px-8 py-6 flex flex-col gap-4">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (

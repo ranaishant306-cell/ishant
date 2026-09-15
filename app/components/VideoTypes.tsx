@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const videos = [
   {
@@ -60,6 +61,7 @@ function VideoCard({
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={() => setHovered((h) => !h)}
       className={`relative overflow-hidden rounded-2xl cursor-pointer ${
         large ? "h-90" : "h-50"
       }`}
@@ -147,12 +149,15 @@ export default function VideoTypes() {
 
         {/* Explore button */}
 <div className="mt-12 text-center">
-  <button className="inline-flex items-center gap-3 bg-red-500 hover:bg-white hover:text-black text-white text-[11px] tracking-widest uppercase px-10 py-5 rounded-full cursor-pointer transition-all duration-300 hover:scale-75">
+  <Link
+    href="/projects"
+    className="inline-flex items-center gap-3 bg-red-500 hover:bg-white hover:text-black text-white text-[11px] tracking-widest uppercase px-10 py-5 rounded-full cursor-pointer transition-all duration-300 hover:scale-75"
+  >
     Explore All Categories
     <span className="w-7 h-7 rounded-full border border-white/40 flex items-center justify-center text-sm transition-all duration-300 group-hover:border-black/40">
       →
     </span>
-  </button>
+  </Link>
 </div>
       </div>
     </section>

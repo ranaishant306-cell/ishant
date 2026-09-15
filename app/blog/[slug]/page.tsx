@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { PortableText } from '@portabletext/react'
-import { client } from '@/sanity/lib/client'
+import { client, isSanityConfigured } from '@/sanity/lib/client'
 import { urlFor } from '@/sanity/lib/image'
 
 const portableTextComponents = {
@@ -61,6 +61,8 @@ export default async function BlogPostPage({
 }: {
   params: Promise<{ slug: string }>
 }) {
+  if (!isSanityConfigured) notFound()
+
   const { slug } = await params
   const post = await getPost(slug)
 
