@@ -59,7 +59,7 @@ export default function Home() {
       {/* HERO */}
 <section className="relative h-screen overflow-hidden">
   <video className="absolute inset-0 w-full h-full object-cover"
-    src="https://res.cloudinary.com/davlyosj1/video/upload/v1772777910/hero_umjlne.mp4" autoPlay muted loop playsInline />
+    src="https://res.cloudinary.com/davlyosj1/video/upload/q_auto,f_auto,w_1600/v1772777910/hero_umjlne.mp4" autoPlay muted loop playsInline />
   <div className="absolute inset-0 bg-black/55" />
   <div ref={heroContentRef}
     className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 pt-24"
@@ -125,9 +125,9 @@ export default function Home() {
                 transition: "opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1)",
               }}>
              {[
-  "https://res.cloudinary.com/davlyosj1/video/upload/v1784007614/cafe_2_s3mxdl.mp4",
-  "https://res.cloudinary.com/davlyosj1/video/upload/v1784007651/Tulips_neckchain_fv7def.mp4",
-  "https://res.cloudinary.com/davlyosj1/video/upload/v1784007649/Swasha_mgrmqw.mp4",
+  "https://res.cloudinary.com/davlyosj1/video/upload/q_auto,f_auto,w_800/v1784007614/cafe_2_s3mxdl.mp4",
+  "https://res.cloudinary.com/davlyosj1/video/upload/q_auto,f_auto,w_800/v1784007651/Tulips_neckchain_fv7def.mp4",
+  "https://res.cloudinary.com/davlyosj1/video/upload/q_auto,f_auto,w_800/v1784007649/Swasha_mgrmqw.mp4",
 ].map((src, i) => (
                 <div key={i} className="flex-1 h-full overflow-hidden rounded-2xl group">
                   <video
@@ -152,7 +152,7 @@ export default function Home() {
               <div className="overflow-hidden rounded-2xl h-full">
                 <video
                   ref={oneVideoRef}
-                  src="https://res.cloudinary.com/davlyosj1/video/upload/v1772777989/doc_glq8jn.mp4"
+                  src="https://res.cloudinary.com/davlyosj1/video/upload/q_auto,f_auto,w_1600/v1772777989/doc_glq8jn.mp4"
                   muted
                   loop
                   playsInline

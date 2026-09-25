@@ -1,6 +1,7 @@
 
 
 import Image from "next/image";
+import InfiniteSpiral from "../components/InfiniteSpiral";
 import {
   Clapperboard,
   BookOpen,
@@ -85,46 +86,27 @@ export default function StorySection() {
               </div>
             </div>
 
-            {/* Right — creative photo collage (desktop) */}
+            {/* Right — infinite spiral gallery (desktop) */}
             <div className="hidden md:block relative h-[480px]">
               {/* Ambient glow */}
-              <div className="absolute top-0 right-8 w-64 h-64 bg-red-500/20 rounded-full blur-3xl" />
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-red-500/10 rounded-full blur-3xl" />
+              <div className="absolute top-0 right-8 w-64 h-64 bg-red-500/20 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-red-500/10 rounded-full blur-3xl pointer-events-none" />
 
-              {/* Card — top left, small, tucked behind */}
-              <div className="absolute top-0 left-28 w-36 h-28 bg-white p-1.5 rounded-2xl shadow-2xl -rotate-12">
-                <div className="relative w-full h-full rounded-xl overflow-hidden">
-                  <Image src={collage[3].src} alt={collage[3].alt} fill sizes="144px" className="object-cover" />
-                </div>
-              </div>
-
-              {/* Card — top right, largest */}
-              <div className="absolute top-8 right-0 w-64 h-48 bg-white p-1.5 rounded-2xl shadow-2xl rotate-6 z-10">
-                <div className="relative w-full h-full rounded-xl overflow-hidden">
-                  <Image src={collage[0].src} alt={collage[0].alt} fill sizes="256px" className="object-cover" />
-                </div>
-              </div>
-
-              {/* Card — center, overlapping */}
-              <div className="absolute top-40 left-8 w-56 h-64 bg-white p-1.5 rounded-2xl shadow-2xl -rotate-6 z-20">
-                <div className="relative w-full h-full rounded-xl overflow-hidden">
-                  <Image src={collage[1].src} alt={collage[1].alt} fill sizes="224px" className="object-cover" />
-                </div>
-              </div>
-
-              {/* Card — bottom left, small */}
-              <div className="absolute bottom-4 left-0 w-40 h-32 bg-white p-1.5 rounded-2xl shadow-2xl rotate-6 z-10">
-                <div className="relative w-full h-full rounded-xl overflow-hidden">
-                  <Image src={collage[4].src} alt={collage[4].alt} fill sizes="160px" className="object-cover" />
-                </div>
-              </div>
-
-              {/* Card — bottom right, smallest */}
-              <div className="absolute bottom-0 right-12 w-48 h-36 bg-white p-1.5 rounded-2xl shadow-2xl rotate-3 z-30">
-                <div className="relative w-full h-full rounded-xl overflow-hidden">
-                  <Image src={collage[2].src} alt={collage[2].alt} fill sizes="192px" className="object-cover" />
-                </div>
-              </div>
+              <InfiniteSpiral
+                items={collage}
+                animationMode="all"
+                speed={0.55}
+                radius={170}
+                cardWidth={140}
+                cardHeight={140}
+                verticalSpacing={70}
+                perspective={1000}
+                cardRadius={14}
+                centerScale={1.2}
+                edgeBlur={6}
+                cardsPerTurn={collage.length}
+                pauseOnHover
+              />
             </div>
 
             {/* Right — simple grid (mobile/tablet fallback) */}
